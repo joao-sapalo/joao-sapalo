@@ -59,7 +59,20 @@ Currently finishing my degree with a job platform project designed for young dev
 
 <div align="center">
 
-**Email:** [joaosapalobenguela@gmail.com](mailto:joaosapalobenguela@gmail.com)
+**Email:** [joao.benguela@milvendas.ao](mailto:joao.benguela@milvendas.ao)
+
+</div>
+
+---
+
+## 🎯 A Aprender · Currently Learning
+
+<div align="center">
+
+![Ruby on Rails](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=rubyonrails&logoColor=white)
+![TDD](https://img.shields.io/badge/TDD-6DB33F?style=for-the-badge&logo=checkmarx&logoColor=white)
+![RSpec](https://img.shields.io/badge/RSpec-FF6600?style=for-the-badge&logo=rubygems&logoColor=white)
+![API Design](https://img.shields.io/badge/API_Design-FF6F00?style=for-the-badge&logo=swagger&logoColor=white)
 
 </div>
 
