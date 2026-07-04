@@ -65,6 +65,18 @@ Currently finishing my degree with a job platform project designed for young dev
 
 ---
 
+## 🌍 Idiomas · Languages
+
+<div align="center">
+
+![Português Nativo](https://img.shields.io/badge/Portugu%C3%AAs-Nativo-008B45?style=for-the-badge&logo=googletranslate&logoColor=white)
+![Inglês Fluente](https://img.shields.io/badge/Ingl%C3%AAs-Fluente-0052B4?style=for-the-badge&logo=googletranslate&logoColor=white)
+![Espanhol Básico](https://img.shields.io/badge/Espanhol-B%C3%A1sico-CC0000?style=for-the-badge&logo=googletranslate&logoColor=white)
+
+</div>
+
+---
+
 ## 🎯 A Aprender · Currently Learning
 
 <div align="center">
