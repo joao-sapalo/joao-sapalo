@@ -48,6 +48,8 @@ Currently finishing my degree with a job platform project designed for young dev
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![DevOps](https://img.shields.io/badge/DevOps-0078D7?style=for-the-badge&logo=azuredevops&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
+![Rails](https://img.shields.io/badge/Rails-CC0000?style=for-the-badge&logo=rubyonrails&logoColor=white)
 
 </div>
 
@@ -58,6 +60,7 @@ Currently finishing my degree with a job platform project designed for young dev
 | Projecto / Project | Descrição / Description | Linguagem / Language | Stars |
 |---|---|---|:---:|
 | [joao-sapalo](https://github.com/joao-sapalo/joao-sapalo) | — | `—` | ★ 1 |
+| [marketao](https://github.com/joao-sapalo/marketao) | Um marketplace voltado para a realidade angolana. | `Ruby on Rails` | ★ 0 |
 | [sankofa](https://github.com/joao-sapalo/sankofa) | Um RPG completamente africano. | `TypeScript` | ★ 1 |
 | [advonline](https://github.com/joao-sapalo/advonline) | Uma ideia que eu tive pra conectar advogados com clientes de forma rápida e eficiente. | `—` | ★ 0 |
 | [pia](https://github.com/joao-sapalo/pia) | subiu | `TypeScript` | ★ 0 |
