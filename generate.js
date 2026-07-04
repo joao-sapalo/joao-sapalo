@@ -138,6 +138,16 @@ ${TECH_BADGES.join("\n")}
 
 ---
 
+## 📫 Contacto · Contact
+
+<div align="center">
+
+**Email:** [joaosapalobenguela@gmail.com](mailto:joaosapalobenguela@gmail.com)
+
+</div>
+
+---
+
 ## 🚀 Projectos em Destaque · Featured Projects
 
 ${repoTable(repos)}

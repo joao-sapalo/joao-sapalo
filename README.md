@@ -55,6 +55,16 @@ Currently finishing my degree with a job platform project designed for young dev
 
 ---
 
+## 📫 Contacto · Contact
+
+<div align="center">
+
+**Email:** [joaosapalobenguela@gmail.com](mailto:joaosapalobenguela@gmail.com)
+
+</div>
+
+---
+
 ## 🚀 Projectos em Destaque · Featured Projects
 
 | Projecto / Project | Descrição / Description | Linguagem / Language | Stars |
