@@ -115,15 +115,24 @@ Currently finishing my degree with a job platform project designed for young dev
 
 ---
 
-## 📊 GitHub Stats
+## 📊 Pulse · Actividade Recente
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=joao-sapalo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
+![⬆️ 0 eventos / semana](https://img.shields.io/badge/%E2%AC%86%EF%B8%8F%200%20eventos%20%2F%20semana-1E90FF?style=for-the-badge&logo=github&logoColor=white)
+![📅 0 eventos / mês](https://img.shields.io/badge/%F0%9F%93%85%200%20eventos%20%2F%20m%C3%AAs-6A5ACD?style=for-the-badge&logo=github&logoColor=white)
+![🔮 Próximo commit: —](https://img.shields.io/badge/%F0%9F%94%AE%20Pr%C3%B3ximo%20commit%3A%20%E2%80%94-9400D3?style=for-the-badge&logo=github&logoColor=white)
 
-![Streak](https://streak-stats.demolab.com?user=joao-sapalo&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)
+</div>
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=joao-sapalo&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
+**🏆 Top Linguagens**
+
+<div align="center">
+
+![JavaScript](https://img.shields.io/badge/JavaScript-333333?style=for-the-badge&logo=javascript&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-333333?style=for-the-badge&logo=typescript&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-333333?style=for-the-badge&logo=php&logoColor=white)
+![Ruby](https://img.shields.io/badge/Ruby-333333?style=for-the-badge&logo=ruby&logoColor=white)
 
 </div>
 

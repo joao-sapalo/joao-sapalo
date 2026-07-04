@@ -71,6 +71,95 @@ const TECH_BADGES = [
     badge("Rails", "CC0000", "rubyonrails"),
 ];
 
+const EMOJI_MAP = {
+    PushEvent: "⬆️",
+    CreateEvent: "📦",
+    IssuesEvent: "🔧",
+    IssueCommentEvent: "💬",
+    PullRequestEvent: "🔀",
+    PullRequestReviewEvent: "👀",
+    WatchEvent: "⭐",
+    ForkEvent: "🍴",
+};
+
+async function getStats() {
+    const { data: events } = await axios.get(
+        `https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=100`,
+        { headers }
+    );
+    const { data: repos } = await axios.get(
+        `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100`,
+        { headers }
+    );
+
+    const langMap = {};
+    for (const repo of repos) {
+        if (repo.fork || !repo.language) continue;
+        langMap[repo.language] = (langMap[repo.language] || 0) + 1;
+    }
+    const topLangs = Object.entries(langMap).sort((a, b) => b[1] - a[1]).slice(0, 4);
+
+    const now = new Date();
+    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    const monthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+
+    const weekEvents = events.filter((e) => new Date(e.created_at) > weekAgo);
+    const monthEvents = events.filter((e) => new Date(e.created_at) > monthAgo);
+
+    const typeCount = {};
+    for (const e of monthEvents) {
+        typeCount[e.type] = (typeCount[e.type] || 0) + 1;
+    }
+    const topType = Object.entries(typeCount).sort((a, b) => b[1] - a[1])[0];
+
+    const hourCount = {};
+    for (const e of monthEvents) {
+        const h = new Date(e.created_at).getHours();
+        hourCount[h] = (hourCount[h] || 0) + 1;
+    }
+    const peakHour = Object.entries(hourCount).sort((a, b) => b[1] - a[1])[0];
+
+    const dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+    const dayCount = {};
+    for (const e of monthEvents) {
+        const d = dayNames[new Date(e.created_at).getDay()];
+        dayCount[d] = (dayCount[d] || 0) + 1;
+    }
+    const topDay = Object.entries(dayCount).sort((a, b) => b[1] - a[1])[0];
+
+    const pushDates = events
+        .filter((e) => e.type === "PushEvent")
+        .map((e) => new Date(e.created_at).getTime())
+        .sort((a, b) => a - b);
+
+    let nextCommit = null;
+    if (pushDates.length >= 2) {
+        const intervals = [];
+        for (let i = 1; i < pushDates.length; i++) {
+            intervals.push(pushDates[i] - pushDates[i - 1]);
+        }
+        const avgInterval = intervals.reduce((a, b) => a + b, 0) / intervals.length;
+        const lastPush = pushDates[pushDates.length - 1];
+        const predictedNext = lastPush + avgInterval;
+        const msLeft = predictedNext - now.getTime();
+        const hoursLeft = Math.round(msLeft / (1000 * 60 * 60));
+
+        let label;
+        if (msLeft <= 0) {
+            label = "Agora! 🔥";
+        } else if (hoursLeft < 24) {
+            label = `~${hoursLeft}h`;
+        } else {
+            label = `~${Math.round(hoursLeft / 24)}d`;
+        }
+
+        const avgDays = (avgInterval / (1000 * 60 * 60 * 24)).toFixed(1);
+        nextCommit = { label, hoursLeft, avgDays, totalPushes: pushDates.length };
+    }
+
+    return { weekEvents, monthEvents, topType, peakHour, topDay, topLangs, nextCommit };
+}
+
 function repoTable(repos) {
     if (!repos.length) return "_Nenhum repositório encontrado._";
     const rows = repos.map((r) => {
@@ -83,10 +172,11 @@ function repoTable(repos) {
 async function generate() {
     console.log("🔍 A buscar dados do GitHub...");
 
-    let profile, repos;
+    let profile, repos, stats;
     try {
         profile = await getProfile();
         repos = await getRepos();
+        stats = await getStats();
     } catch (err) {
         console.error("❌ Erro ao aceder à API do GitHub:", err.response?.data?.message || err.message);
         process.exit(1);
@@ -190,15 +280,24 @@ ${repoTable(repos)}
 
 ---
 
-## 📊 GitHub Stats
+## 📊 Pulse · Actividade Recente
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
+${badge(`⬆️ ${stats.weekEvents.length} eventos / semana`, "1E90FF", "github")}
+${badge(`📅 ${stats.monthEvents.length} eventos / mês`, "6A5ACD", "github")}
+${stats.peakHour ? badge(`⏰ Pico: ${stats.peakHour[0]}h`, "FF8C00", "clockify") : ""}
+${stats.topDay ? badge(`📆 Dia: ${stats.topDay[0]}`, "32CD32", "github") : ""}
+${stats.topType ? badge(`${EMOJI_MAP[stats.topType[0]] || "📌"} ${stats.topType[0].replace("Event", "")} (${stats.topType[1]})`, "DC143C", "github") : ""}
+${stats.nextCommit ? badge(`🔮 Próximo commit: ${stats.nextCommit.label}`, "9400D3", "github") : ""}
 
-![Streak](https://streak-stats.demolab.com?user=${GITHUB_USERNAME}&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)
+</div>
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
+**🏆 Top Linguagens**
+
+<div align="center">
+
+${stats.topLangs.map(([lang]) => badge(lang, "333333", lang.toLowerCase())).join("\n")}
 
 </div>
 
