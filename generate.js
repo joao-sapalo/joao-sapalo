@@ -26,15 +26,27 @@ async function getProfile() {
     return data;
 }
 
+const PINNED_REPOS = ["marketao"];
+
+const LANGUAGE_OVERRIDES = {
+    marketao: "Ruby on Rails",
+};
+
 async function getRepos() {
     const { data } = await axios.get(
         `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=stars&per_page=30`,
         { headers }
     );
-    return data
-        .filter((r) => !r.fork)
+    const pinned = data.filter((r) => PINNED_REPOS.includes(r.name));
+    const rest = data
+        .filter((r) => !r.fork && !PINNED_REPOS.includes(r.name))
         .sort((a, b) => b.stargazers_count - a.stargazers_count)
-        .slice(0, 6);
+        .slice(0, 6 - pinned.length);
+    const combined = [...pinned, ...rest];
+    return combined.map((r) => ({
+        ...r,
+        language: LANGUAGE_OVERRIDES[r.name] || r.language,
+    }));
 }
 
 function badge(label, color, logo) {
@@ -55,6 +67,8 @@ const TECH_BADGES = [
     badge("Docker", "2496ED", "docker"),
     badge("DevOps", "0078D7", "azuredevops"),
     badge("TypeScript", "3178C6", "typescript"),
+    badge("Ruby", "CC342D", "ruby"),
+    badge("Rails", "CC0000", "rubyonrails"),
 ];
 
 function repoTable(repos) {
