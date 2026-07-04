@@ -157,8 +157,60 @@ async function getStats() {
         nextCommit = { label, hoursLeft, avgDays, totalPushes: pushDates.length };
     }
 
-    return { weekEvents, monthEvents, topType, peakHour, topDay, topLangs, nextCommit };
+    const pushDays = [...new Set(pushDates.map((t) => {
+        const d = new Date(t);
+        return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+    }))].sort().reverse();
+
+    let streak = 0;
+    const today = new Date();
+    for (let i = 0; i < pushDays.length; i++) {
+        const d = new Date(pushDays[i]);
+        const expected = new Date(today.getTime() - i * 24 * 60 * 60 * 1000);
+        if (d.getFullYear() === expected.getFullYear() &&
+            d.getMonth() === expected.getMonth() &&
+            d.getDate() === expected.getDate()) {
+            streak++;
+        } else {
+            break;
+        }
+    }
+
+    let plantEmoji, plantLabel, plantColor;
+    if (streak === 0) { plantEmoji = "🌱"; plantLabel = "Semente"; plantColor = "8B4513"; }
+    else if (streak <= 2) { plantEmoji = "🌿"; plantLabel = "A brotar"; plantColor = "228B22"; }
+    else if (streak <= 5) { plantEmoji = "🌳"; plantLabel = "Árvore"; plantColor = "006400"; }
+    else { plantEmoji = "🌲"; plantLabel = "Floresta"; plantColor = "004d00"; }
+
+    const monthPushCount = pushDates.filter((t) => new Date(t) > monthAgo).length;
+    const commitTarget = 20;
+    const progressPct = Math.min(100, Math.round((monthPushCount / commitTarget) * 100));
+    let progressColor = "FF4444";
+    if (progressPct >= 80) progressColor = "32CD32";
+    else if (progressPct >= 50) progressColor = "FFA500";
+
+    const statsMonthEvents = monthEvents.length;
+    const typeName = topType ? topType[0].replace("Event", "") : "Push";
+    const funFacts = [];
+    if (statsMonthEvents > 0) {
+        funFacts.push(`⚡ ${statsMonthEvents} eventos este mês`);
+        if (topDay) funFacts.push(`📆 Dia favorito: ${topDay[0]}`);
+        if (peakHour) funFacts.push(`⏰ Pico de código: ${peakHour[0]}h`);
+        if (topType) funFacts.push(`📊 Evento favorito: ${typeName}`);
+        if (topLangs.length) funFacts.push(`💻 Top linguagem: ${topLangs[0][0]}`);
+        if (nextCommit) funFacts.push(`🔮 Média de ${nextCommit.avgDays}d entre commits`);
+    }
+
+    return { weekEvents, monthEvents, statsMonthEvents, topType, peakHour, topDay, topLangs, nextCommit, streak, plantEmoji, plantLabel, plantColor, monthPushCount, commitTarget, progressPct, progressColor, funFacts };
 }
+
+const LANG_COLORS = {
+    JavaScript: "#f1e05a", TypeScript: "#3178c6", Ruby: "#701516", Python: "#3572A5",
+    PHP: "#4F5D95", Kotlin: "#A97BFF", Dart: "#00B4AB", Swift: "#F05138",
+    Java: "#b07219", Go: "#00ADD8", Rust: "#dea584", "C++": "#f34b7d",
+    C: "#555555", HTML: "#e34c26", CSS: "#563d7c", Shell: "#89e051",
+    Lua: "#000080", "Ruby on Rails": "#CC0000",
+};
 
 function repoTable(repos) {
     if (!repos.length) return "_Nenhum repositório encontrado._";
@@ -167,6 +219,37 @@ function repoTable(repos) {
         return `| [${r.name}](${r.html_url}) | ${desc} | \`${r.language || "—"}\` | ★ ${r.stargazers_count} |`;
     }).join("\n");
     return `| Projecto / Project | Descrição / Description | Linguagem / Language | Stars |\n|---|---|---|:---:|\n${rows}`;
+}
+
+function repoBookShelf(repos) {
+    const books = repos.slice(0, 8).map((r) => {
+        const color = LANG_COLORS[r.language] || "#666";
+        return `<td align="center" style="border:0; padding:8px;">
+  <div style="
+    background: linear-gradient(135deg, ${color}22, ${color}44);
+    border-left: 4px solid ${color};
+    border-radius: 4px;
+    padding: 12px 8px;
+    min-width: 100px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  ">
+    <a href="${r.html_url}" style="text-decoration:none; color:inherit;">
+      <div style="font-weight:bold; font-size:14px; margin-bottom:4px;">📖 ${r.name}</div>
+      <div style="font-size:11px; color:#888;">${r.language || "—"}</div>
+      <div style="font-size:12px; margin-top:4px;">★ ${r.stargazers_count}</div>
+    </a>
+  </div>
+</td>`;
+    }).join("\n    ");
+
+    const rows = [];
+    for (let i = 0; i < books.length; i += 4) {
+        rows.push(`<tr>${books.slice(i, i + 4).join("")}</tr>`);
+    }
+
+    return `<table style="border:none; width:100%;">
+  ${rows.join("\n  ")}
+</table>`;
 }
 
 async function generate() {
@@ -266,6 +349,50 @@ ${TECH_BADGES.join("\n")}
 ## 🚀 Projectos em Destaque · Featured Projects
 
 ${repoTable(repos)}
+
+---
+
+## 🌱 Plantação de Código
+
+<div align="center">
+
+${badge(`${stats.plantEmoji} ${stats.plantLabel} · ${stats.streak} dias seguidos`, stats.plantColor, "github")}
+
+<sub>A planta cresce a cada dia consecutivo com commits. 0d = 🌱 Semente · 1-2d = 🌿 A brotar · 3-5d = 🌳 Árvore · 6+d = 🌲 Floresta</sub>
+
+</div>
+
+---
+
+## 🎯 Meta do Mês
+
+<div align="center">
+
+${badge(`📤 ${stats.monthPushCount} / ${stats.commitTarget} pushes`, stats.progressColor, "github")}
+
+![Progresso](https://img.shields.io/badge/Progresso-${stats.progressPct}%25-${stats.progressColor}?style=for-the-badge)
+
+</div>
+
+---
+
+## 🧩 Fun Facts
+
+<div align="center">
+
+${stats.funFacts.length ? stats.funFacts.map((f) => badge(f, "2F4F4F", "github")).join("\n") : badge("Ainda sem dados — começa a codar! 💪", "2F4F4F", "github")}
+
+</div>
+
+---
+
+## 📚 Biblioteca de Repos
+
+<div align="center">
+
+${repoBookShelf(repos)}
+
+</div>
 
 ---
 

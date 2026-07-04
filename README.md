@@ -104,6 +104,52 @@ Currently finishing my degree with a job platform project designed for young dev
 
 ---
 
+## 🌱 Plantação de Código
+
+<div align="center">
+
+![🌱 Semente · 0 dias seguidos](https://img.shields.io/badge/%F0%9F%8C%B1%20Semente%20%C2%B7%200%20dias%20seguidos-8B4513?style=for-the-badge&logo=github&logoColor=white)
+
+<sub>A planta cresce a cada dia consecutivo com commits. 0d = 🌱 Semente · 1-2d = 🌿 A brotar · 3-5d = 🌳 Árvore · 6+d = 🌲 Floresta</sub>
+
+</div>
+
+---
+
+## 🎯 Meta do Mês
+
+<div align="center">
+
+![📤 0 / 20 pushes](https://img.shields.io/badge/%F0%9F%93%A4%200%20%2F%2020%20pushes-FF4444?style=for-the-badge&logo=github&logoColor=white)
+
+![Progresso](https://img.shields.io/badge/Progresso-0%25-FF4444?style=for-the-badge)
+
+</div>
+
+---
+
+## 🧩 Fun Facts
+
+<div align="center">
+
+![Ainda sem dados — começa a codar! 💪](https://img.shields.io/badge/Ainda%20sem%20dados%20%E2%80%94%20come%C3%A7a%20a%20codar!%20%F0%9F%92%AA-2F4F4F?style=for-the-badge&logo=github&logoColor=white)
+
+</div>
+
+---
+
+## 📚 Biblioteca de Repos
+
+<div align="center">
+
+| | | | |
+|---|---|---|---|
+| <div style="background:linear-gradient(135deg,#3178c622,#3178c644);border-left:4px solid #3178c6;border-radius:4px;padding:12px 8px;min-width:100px;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;"><a href="https://github.com/joao-sapalo/sankofa" style="text-decoration:none;color:inherit;"><div style="font-weight:bold;font-size:14px;margin-bottom:4px;">📖 sankofa</div><div style="font-size:11px;color:#888;">TypeScript</div><div style="font-size:12px;margin-top:4px;">★ 1</div></a></div> | <div style="background:linear-gradient(135deg,#CC000022,#CC000044);border-left:4px solid #CC0000;border-radius:4px;padding:12px 8px;min-width:100px;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;"><a href="https://github.com/joao-sapalo/marketao" style="text-decoration:none;color:inherit;"><div style="font-weight:bold;font-size:14px;margin-bottom:4px;">📖 marketao</div><div style="font-size:11px;color:#888;">Ruby on Rails</div><div style="font-size:12px;margin-top:4px;">★ 0</div></a></div> | <div style="background:linear-gradient(135deg,#3178c622,#3178c644);border-left:4px solid #3178c6;border-radius:4px;padding:12px 8px;min-width:100px;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;"><a href="https://github.com/joao-sapalo/pia" style="text-decoration:none;color:inherit;"><div style="font-weight:bold;font-size:14px;margin-bottom:4px;">📖 pia</div><div style="font-size:11px;color:#888;">TypeScript</div><div style="font-size:12px;margin-top:4px;">★ 0</div></a></div> | <div style="background:linear-gradient(135deg,#66666622,#66666644);border-left:4px solid #666;border-radius:4px;padding:12px 8px;min-width:100px;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;"><a href="https://github.com/joao-sapalo/advonline" style="text-decoration:none;color:inherit;"><div style="font-weight:bold;font-size:14px;margin-bottom:4px;">📖 advonline</div><div style="font-size:11px;color:#888;">—</div><div style="font-size:12px;margin-top:4px;">★ 0</div></a></div> |
+
+</div>
+
+---
+
 ## 🐍 Contribution Graph
 
 <div align="center">
