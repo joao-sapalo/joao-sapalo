@@ -82,11 +82,21 @@ const EMOJI_MAP = {
     ForkEvent: "🍴",
 };
 
+async function fetchAllEvents() {
+    const allEvents = [];
+    for (let page = 1; page <= 3; page++) {
+        const { data } = await axios.get(
+            `https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=100&page=${page}`,
+            { headers }
+        );
+        if (!data.length) break;
+        allEvents.push(...data);
+    }
+    return allEvents;
+}
+
 async function getStats() {
-    const { data: events } = await axios.get(
-        `https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=100`,
-        { headers }
-    );
+    const events = await fetchAllEvents();
     const { data: repos } = await axios.get(
         `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100`,
         { headers }
@@ -127,8 +137,9 @@ async function getStats() {
     }
     const topDay = Object.entries(dayCount).sort((a, b) => b[1] - a[1])[0];
 
+    const CODE_EVENTS = ["PushEvent", "PullRequestEvent", "CreateEvent", "PullRequestReviewEvent"];
     const pushDates = events
-        .filter((e) => e.type === "PushEvent")
+        .filter((e) => CODE_EVENTS.includes(e.type))
         .map((e) => new Date(e.created_at).getTime())
         .sort((a, b) => a - b);
 
@@ -453,7 +464,7 @@ ${stats.topLangs.map(([lang]) => badge(lang, "333333", lang.toLowerCase())).join
 
     fs.writeFileSync("README.md", readme, "utf8");
     console.log("✅ README.md gerado com sucesso!");
-    console.log("📋 Cola o conteúdo no repositório joao-sapalo/joao-sapalo no GitHub.");
+    console.log("📋 README enviado para o repositório via GitHub Actions.");
 }
 
 generate().catch((err) => {
