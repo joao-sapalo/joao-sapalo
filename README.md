@@ -6,13 +6,10 @@
 
 ### 🇵🇹 Desenvolvedor Full Stack · 🇬🇧 Full Stack Developer
 
-
-
-
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/joão-benguela-9314a4412)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jo%C3%A3o-benguela-9314a4412/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/joao-sapalo)
 [![GitHub followers](https://img.shields.io/github/followers/joao-sapalo?style=for-the-badge&logo=github&logoColor=white&color=181717)](https://github.com/joao-sapalo?tab=followers)
+![Profile views](https://komarev.com/ghpvc/?username=joao-sapalo&style=for-the-badge&color=0e75b6)
 
 </div>
 
@@ -22,13 +19,13 @@
 
 Sou desenvolvedor Full Stack apaixonado por criar soluções robustas e escaláveis.
 Tenho experiência em desenvolvimento web, mobile e DevOps, com foco em segurança e boas práticas de arquitectura de software.
-Actualmente a finalizar a minha formação académica com um projecto de plataforma de emprego para programadores jovens.
+Actualmente a finalizar a minha formação académica com um projecto de plataforma de emprego para programadores jovens em Angola.
 
 ## 🇬🇧 About Me
 
 Full Stack Developer passionate about building robust and scalable solutions.
 Experienced in web, mobile, and DevOps development, with a strong focus on security and software architecture best practices.
-Currently finishing my degree with a job platform project designed for young developers.
+Currently finishing my degree with a job platform project designed for young developers in Angola.
 
 ---
 
@@ -44,40 +41,18 @@ Currently finishing my degree with a job platform project designed for young dev
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![DevOps](https://img.shields.io/badge/DevOps-0078D7?style=for-the-badge&logo=azuredevops&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 ![Rails](https://img.shields.io/badge/Rails-CC0000?style=for-the-badge&logo=rubyonrails&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![DevOps](https://img.shields.io/badge/DevOps-0078D7?style=for-the-badge&logo=azuredevops&logoColor=white)
 
 </div>
 
 ---
 
-## 📫 Contacto · Contact
-
-<div align="center">
-
-**Email:** [joao.benguela@milvendas.ao](mailto:joao.benguela@milvendas.ao)
-
-</div>
-
----
-
-## 🌍 Idiomas · Languages
-
-<div align="center">
-
-![Português Nativo](https://img.shields.io/badge/Portugu%C3%AAs-Nativo-008B45?style=for-the-badge&logo=googletranslate&logoColor=white)
-![Inglês Fluente](https://img.shields.io/badge/Ingl%C3%AAs-Fluente-0052B4?style=for-the-badge&logo=googletranslate&logoColor=white)
-![Espanhol Básico](https://img.shields.io/badge/Espanhol-B%C3%A1sico-CC0000?style=for-the-badge&logo=googletranslate&logoColor=white)
-
-</div>
-
----
-
-## 🎯 A Aprender · Currently Learning
+## 🌱 A Aprender · Currently Learning
 
 <div align="center">
 
@@ -90,63 +65,27 @@ Currently finishing my degree with a job platform project designed for young dev
 
 ---
 
+## 🌍 Idiomas · Languages
+
+<div align="center">
+
+![Português Nativo](https://img.shields.io/badge/Português-Nativo-008B45?style=for-the-badge&logo=googletranslate&logoColor=white)
+![Inglês Fluente](https://img.shields.io/badge/Inglês-Fluente-0052B4?style=for-the-badge&logo=googletranslate&logoColor=white)
+![Espanhol Básico](https://img.shields.io/badge/Espanhol-Básico-CC0000?style=for-the-badge&logo=googletranslate&logoColor=white)
+
+</div>
+
+---
+
 ## 🚀 Projectos em Destaque · Featured Projects
 
 | Projecto / Project | Descrição / Description | Linguagem / Language | Stars |
 |---|---|---|:---:|
-| [joao-sapalo](https://github.com/joao-sapalo/joao-sapalo) | — | `—` | ★ 1 |
-| [marketao](https://github.com/joao-sapalo/marketao) | Um marketplace voltado para a realidade angolana. | `Ruby on Rails` | ★ 0 |
-| [sankofa](https://github.com/joao-sapalo/sankofa) | Um RPG completamente africano. | `TypeScript` | ★ 1 |
-| [advonline](https://github.com/joao-sapalo/advonline) | Uma ideia que eu tive pra conectar advogados com clientes de forma rápida e eficiente. | `—` | ★ 0 |
-| [pia](https://github.com/joao-sapalo/pia) | subiu | `TypeScript` | ★ 0 |
-| [eduguides](https://github.com/joao-sapalo/eduguides) | subindo | `—` | ★ 0 |
-| [eduguide](https://github.com/joao-sapalo/eduguide) | ... | `—` | ★ 0 |
-
----
-
-## 🌱 Plantação de Código
-
-<div align="center">
-
-![🌱 Semente · 0 dias seguidos](https://img.shields.io/badge/%F0%9F%8C%B1%20Semente%20%C2%B7%200%20dias%20seguidos-8B4513?style=for-the-badge&logo=github&logoColor=white)
-
-<sub>A planta cresce a cada dia consecutivo com commits. 0d = 🌱 Semente · 1-2d = 🌿 A brotar · 3-5d = 🌳 Árvore · 6+d = 🌲 Floresta</sub>
-
-</div>
-
----
-
-## 🎯 Meta do Mês
-
-<div align="center">
-
-![📤 0 / 20 pushes](https://img.shields.io/badge/%F0%9F%93%A4%200%20%2F%2020%20pushes-FF4444?style=for-the-badge&logo=github&logoColor=white)
-
-![Progresso](https://img.shields.io/badge/Progresso-0%25-FF4444?style=for-the-badge)
-
-</div>
-
----
-
-## 🧩 Fun Facts
-
-<div align="center">
-
-![Ainda sem dados — começa a codar! 💪](https://img.shields.io/badge/Ainda%20sem%20dados%20%E2%80%94%20come%C3%A7a%20a%20codar!%20%F0%9F%92%AA-2F4F4F?style=for-the-badge&logo=github&logoColor=white)
-
-</div>
-
----
-
-## 📚 Biblioteca de Repos
-
-<div align="center">
-
-| | | | |
-|---|---|---|---|
-| <div style="background:linear-gradient(135deg,#3178c622,#3178c644);border-left:4px solid #3178c6;border-radius:4px;padding:12px 8px;min-width:100px;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;"><a href="https://github.com/joao-sapalo/sankofa" style="text-decoration:none;color:inherit;"><div style="font-weight:bold;font-size:14px;margin-bottom:4px;">📖 sankofa</div><div style="font-size:11px;color:#888;">TypeScript</div><div style="font-size:12px;margin-top:4px;">★ 1</div></a></div> | <div style="background:linear-gradient(135deg,#CC000022,#CC000044);border-left:4px solid #CC0000;border-radius:4px;padding:12px 8px;min-width:100px;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;"><a href="https://github.com/joao-sapalo/marketao" style="text-decoration:none;color:inherit;"><div style="font-weight:bold;font-size:14px;margin-bottom:4px;">📖 marketao</div><div style="font-size:11px;color:#888;">Ruby on Rails</div><div style="font-size:12px;margin-top:4px;">★ 0</div></a></div> | <div style="background:linear-gradient(135deg,#3178c622,#3178c644);border-left:4px solid #3178c6;border-radius:4px;padding:12px 8px;min-width:100px;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;"><a href="https://github.com/joao-sapalo/pia" style="text-decoration:none;color:inherit;"><div style="font-weight:bold;font-size:14px;margin-bottom:4px;">📖 pia</div><div style="font-size:11px;color:#888;">TypeScript</div><div style="font-size:12px;margin-top:4px;">★ 0</div></a></div> | <div style="background:linear-gradient(135deg,#66666622,#66666644);border-left:4px solid #666;border-radius:4px;padding:12px 8px;min-width:100px;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;"><a href="https://github.com/joao-sapalo/advonline" style="text-decoration:none;color:inherit;"><div style="font-weight:bold;font-size:14px;margin-bottom:4px;">📖 advonline</div><div style="font-size:11px;color:#888;">—</div><div style="font-size:12px;margin-top:4px;">★ 0</div></a></div> |
-
-</div>
+| [marketao](https://github.com/joao-sapalo/marketao) | Marketplace voltado para a realidade angolana | `Ruby` | ★ 0 |
+| [sankofa](https://github.com/joao-sapalo/sankofa) | RPG completamente africano | `TypeScript` | ★ 1 |
+| [advonline](https://github.com/joao-sapalo/advonline) | Plataforma para conectar advogados com clientes | `—` | ★ 0 |
+| [pia](https://github.com/joao-sapalo/pia) | — | `TypeScript` | ★ 0 |
+| [eduguide](https://github.com/joao-sapalo/eduguide) | — | `—` | ★ 0 |
 
 ---
 
@@ -161,24 +100,15 @@ Currently finishing my degree with a job platform project designed for young dev
 
 ---
 
-## 📊 Pulse · Actividade Recente
+## 📊 GitHub Stats
 
 <div align="center">
 
-![⬆️ 0 eventos / semana](https://img.shields.io/badge/%E2%AC%86%EF%B8%8F%200%20eventos%20%2F%20semana-1E90FF?style=for-the-badge&logo=github&logoColor=white)
-![📅 0 eventos / mês](https://img.shields.io/badge/%F0%9F%93%85%200%20eventos%20%2F%20m%C3%AAs-6A5ACD?style=for-the-badge&logo=github&logoColor=white)
-![🔮 Próximo commit: —](https://img.shields.io/badge/%F0%9F%94%AE%20Pr%C3%B3ximo%20commit%3A%20%E2%80%94-9400D3?style=for-the-badge&logo=github&logoColor=white)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=joao-sapalo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
 
-</div>
+![Streak](https://streak-stats.demolab.com?user=joao-sapalo&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)
 
-**🏆 Top Linguagens**
-
-<div align="center">
-
-![JavaScript](https://img.shields.io/badge/JavaScript-333333?style=for-the-badge&logo=javascript&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-333333?style=for-the-badge&logo=typescript&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-333333?style=for-the-badge&logo=php&logoColor=white)
-![Ruby](https://img.shields.io/badge/Ruby-333333?style=for-the-badge&logo=ruby&logoColor=white)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=joao-sapalo&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
 
 </div>
 
@@ -200,6 +130,24 @@ Currently finishing my degree with a job platform project designed for young dev
 
 ---
 
+## ⚡ Actividade Recente · Recent Activity
+
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
+
+---
+
+## 📝 Últimos Artigos · Latest Posts
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+---
+
 <div align="center">
-  <sub>⚡ Actualizado automaticamente · Auto-updated with <a href="https://github.com/joao-sapalo/joao-sapalo/blob/main/generate.js">generate.js</a></sub>
+
+<!-- LAST_UPDATED -->🕐 Último update: —<!-- /LAST_UPDATED -->
+
+<sub>⚡ Actualizado automaticamente · Auto-updated with <a href="https://github.com/joao-sapalo/joao-sapalo/blob/main/generate.js">generate.js</a></sub>
+
 </div>
