@@ -47,6 +47,9 @@ Currently finishing my degree with a job platform project designed for young dev
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![DevOps](https://img.shields.io/badge/DevOps-0078D7?style=for-the-badge&logo=azuredevops&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Windows Forms](https://img.shields.io/badge/Windows%20Forms-512BD4?style=for-the-badge&logo=windows&logoColor=white)
 
 </div>
 
@@ -70,7 +73,7 @@ Currently finishing my degree with a job platform project designed for young dev
 <div align="center">
 
 ![Português Nativo](https://img.shields.io/badge/Português-Nativo-008B45?style=for-the-badge&logo=googletranslate&logoColor=white)
-![Inglês Fluente](https://img.shields.io/badge/Inglês-Fluente-0052B4?style=for-the-badge&logo=googletranslate&logoColor=white)
+![Inglês Intermediário](https://img.shields.io/badge/Inglês-Intermedi%C3%A1rio-0052B4?style=for-the-badge&logo=googletranslate&logoColor=white)
 ![Espanhol Básico](https://img.shields.io/badge/Espanhol-Básico-CC0000?style=for-the-badge&logo=googletranslate&logoColor=white)
 
 </div>

@@ -69,6 +69,9 @@ const TECH_BADGES = [
     badge("TypeScript", "3178C6", "typescript"),
     badge("Ruby", "CC342D", "ruby"),
     badge("Rails", "CC0000", "rubyonrails"),
+    badge("C#", "512BD4", "csharp"),
+    badge(".NET", "512BD4", "dotnet"),
+    badge("Windows Forms", "512BD4", "windows"),
 ];
 
 const EMOJI_MAP = {
@@ -84,13 +87,15 @@ const EMOJI_MAP = {
 
 async function fetchAllEvents() {
     const allEvents = [];
-    for (let page = 1; page <= 3; page++) {
+    let page = 1;
+    while (true) {
         const { data } = await axios.get(
             `https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=100&page=${page}`,
             { headers }
         );
         if (!data.length) break;
         allEvents.push(...data);
+        page++;
     }
     return allEvents;
 }
@@ -196,7 +201,7 @@ async function getStats() {
     const monthPushCount = pushDates.filter((t) => new Date(t) > monthAgo).length;
     const commitTarget = 20;
     const progressPct = Math.min(100, Math.round((monthPushCount / commitTarget) * 100));
-    let progressColor = "FF4444";
+    let progressColor = "666";
     if (progressPct >= 80) progressColor = "32CD32";
     else if (progressPct >= 50) progressColor = "FFA500";
 
@@ -220,7 +225,7 @@ const LANG_COLORS = {
     PHP: "#4F5D95", Kotlin: "#A97BFF", Dart: "#00B4AB", Swift: "#F05138",
     Java: "#b07219", Go: "#00ADD8", Rust: "#dea584", "C++": "#f34b7d",
     C: "#555555", HTML: "#e34c26", CSS: "#563d7c", Shell: "#89e051",
-    Lua: "#000080", "Ruby on Rails": "#CC0000",
+    Lua: "#000080", "Ruby on Rails": "#CC0000", CSharp: "#512BD4", Dotnet: "#512BD4",
 };
 
 function repoTable(repos) {
@@ -337,7 +342,7 @@ ${TECH_BADGES.join("\n")}
 <div align="center">
 
 ![Português Nativo](https://img.shields.io/badge/Portugu%C3%AAs-Nativo-008B45?style=for-the-badge&logo=googletranslate&logoColor=white)
-![Inglês Fluente](https://img.shields.io/badge/Ingl%C3%AAs-Fluente-0052B4?style=for-the-badge&logo=googletranslate&logoColor=white)
+![Inglês Intermediário](https://img.shields.io/badge/Ingl%C3%AAs-Intermedi%C3%A1rio-0052B4?style=for-the-badge&logo=googletranslate&logoColor=white)
 ![Espanhol Básico](https://img.shields.io/badge/Espanhol-B%C3%A1sico-CC0000?style=for-the-badge&logo=googletranslate&logoColor=white)
 
 </div>
